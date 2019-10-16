@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29409.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TournamentUI", "TournamentUI\TournamentUI.csproj", "{F32537CD-ED95-4B65-9A81-3BB43808CDD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TournamentLogic", "TournamentLogic\TournamentLogic.csproj", "{60A7EFC5-A56F-4B5E-B730-8DB1106FA0B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F32537CD-ED95-4B65-9A81-3BB43808CDD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F32537CD-ED95-4B65-9A81-3BB43808CDD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F32537CD-ED95-4B65-9A81-3BB43808CDD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F32537CD-ED95-4B65-9A81-3BB43808CDD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60A7EFC5-A56F-4B5E-B730-8DB1106FA0B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60A7EFC5-A56F-4B5E-B730-8DB1106FA0B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60A7EFC5-A56F-4B5E-B730-8DB1106FA0B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60A7EFC5-A56F-4B5E-B730-8DB1106FA0B3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4097FD0D-D7B1-4DF1-A81E-0B5B905DEF67}
+	EndGlobalSection
+EndGlobal
