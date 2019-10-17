@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TournamentLogic
 {
-    public class GameLogic
+    public class GameModel
     {
         public string _Games { get; }
 

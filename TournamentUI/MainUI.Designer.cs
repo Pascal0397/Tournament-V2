@@ -69,7 +69,7 @@
             this.label1.Location = new System.Drawing.Point(16, 118);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1860, 21);
+            this.label1.Size = new System.Drawing.Size(1488, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = resources.GetString("label1.Text");
             // 
@@ -131,6 +131,7 @@
             this.tPlayersListBox.Name = "tPlayersListBox";
             this.tPlayersListBox.Size = new System.Drawing.Size(270, 411);
             this.tPlayersListBox.TabIndex = 8;
+            this.tPlayersListBox.SelectedIndexChanged += new System.EventHandler(this.tPlayersListBox_SelectedIndexChanged);
             // 
             // MainUI
             // 

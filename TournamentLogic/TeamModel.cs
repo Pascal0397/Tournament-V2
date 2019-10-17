@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace TournamentLogic
 {
-    public class TeamLogic
+    public class TeamModel
     {
+        public string _players { get; set; }
+        public string _teamName { get; set; }
+
         List<string> players = new List<string>();
         string nameOfTeam;
     }

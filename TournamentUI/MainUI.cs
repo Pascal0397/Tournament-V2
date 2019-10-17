@@ -11,12 +11,11 @@ using System.Windows.Forms;
 namespace TournamentUI
 {
     public delegate void DataTransfer(string teamData);
-    public delegate void PlayerDataTransfer(string playerData);
+    public delegate void PlayerTransfer(string playerData);
     // TODO: Transfer Player Data
     public partial class MainUI : Form
     {
         public DataTransfer transferDelegate;
-        public PlayerDataTransfer transferPlayerData;
         
         private bool createTeamButtonWasClicked = false;
 
@@ -24,7 +23,6 @@ namespace TournamentUI
         {
             InitializeComponent();
             transferDelegate += new DataTransfer(DataMethod);
-            transferPlayerData += new PlayerDataTransfer(DataMethod);
         }
 
         public void DataMethod(string teamData)
@@ -69,6 +67,11 @@ namespace TournamentUI
         {
             TournamentUI tournamentUI = new TournamentUI();
             tournamentUI.ShowDialog();
+        }
+
+        public void tPlayersListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

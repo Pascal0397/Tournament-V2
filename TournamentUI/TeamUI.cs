@@ -15,7 +15,7 @@ namespace TournamentUI
     {
         public static string passingText = "";
         DataTransfer transferDel;
-
+        
         public TeamUI(DataTransfer teamDel)
         {
             InitializeComponent();
@@ -82,10 +82,19 @@ namespace TournamentUI
             }
         }
 
-        private void createTeamButton_Click(object sender, EventArgs e)
+        public void createTeamButton_Click(object sender, EventArgs e)
         {
+            MainUI main = new MainUI();
             string teamData = createTeamTextBox.Text;
+     
             transferDel.Invoke(teamData);
+
+            foreach (string s in playerAddedListBox.Items)
+            {
+                
+            }
+
+            createTeamTextBox.Clear();
         }
 
         public void playerAddedListBox_SelectedIndexChanged(object sender, EventArgs e)
