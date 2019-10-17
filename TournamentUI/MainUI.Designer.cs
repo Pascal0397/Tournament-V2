@@ -34,7 +34,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.createTeamButton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnCreateTorunament = new System.Windows.Forms.Button();
+            this.tTeamsListBox = new System.Windows.Forms.ListBox();
+            this.tPlayersListBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // tournamentLabel
@@ -67,7 +69,7 @@
             this.label1.Location = new System.Drawing.Point(16, 118);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1188, 17);
+            this.label1.Size = new System.Drawing.Size(1860, 21);
             this.label1.TabIndex = 3;
             this.label1.Text = resources.GetString("label1.Text");
             // 
@@ -86,32 +88,59 @@
             // 
             this.createTeamButton.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createTeamButton.ForeColor = System.Drawing.Color.DarkRed;
-            this.createTeamButton.Location = new System.Drawing.Point(707, 11);
+            this.createTeamButton.Location = new System.Drawing.Point(1222, 11);
             this.createTeamButton.Name = "createTeamButton";
-            this.createTeamButton.Size = new System.Drawing.Size(252, 53);
+            this.createTeamButton.Size = new System.Drawing.Size(252, 66);
             this.createTeamButton.TabIndex = 5;
             this.createTeamButton.Text = "Create Team";
             this.createTeamButton.UseVisualStyleBackColor = true;
             this.createTeamButton.Click += new System.EventHandler(this.createTeamButton_Click);
             // 
-            // button2
+            // btnCreateTorunament
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.DarkRed;
-            this.button2.Location = new System.Drawing.Point(413, 11);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(279, 54);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Create Tournament";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCreateTorunament.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateTorunament.ForeColor = System.Drawing.Color.DarkRed;
+            this.btnCreateTorunament.Location = new System.Drawing.Point(901, 11);
+            this.btnCreateTorunament.Name = "btnCreateTorunament";
+            this.btnCreateTorunament.Size = new System.Drawing.Size(315, 66);
+            this.btnCreateTorunament.TabIndex = 6;
+            this.btnCreateTorunament.Text = "Create Tournament";
+            this.btnCreateTorunament.UseVisualStyleBackColor = true;
+            this.btnCreateTorunament.Click += new System.EventHandler(this.btnCreateTorunament_Click);
+            // 
+            // tTeamsListBox
+            // 
+            this.tTeamsListBox.AccessibleName = "tTeamsListBox";
+            this.tTeamsListBox.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.tTeamsListBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tTeamsListBox.FormattingEnabled = true;
+            this.tTeamsListBox.ItemHeight = 37;
+            this.tTeamsListBox.Location = new System.Drawing.Point(1211, 521);
+            this.tTeamsListBox.Name = "tTeamsListBox";
+            this.tTeamsListBox.Size = new System.Drawing.Size(262, 411);
+            this.tTeamsListBox.TabIndex = 7;
+            this.tTeamsListBox.SelectedIndexChanged += new System.EventHandler(this.tTeamsListBox_SelectedIndexChanged);
+            // 
+            // tPlayersListBox
+            // 
+            this.tPlayersListBox.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.tPlayersListBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tPlayersListBox.FormattingEnabled = true;
+            this.tPlayersListBox.ItemHeight = 37;
+            this.tPlayersListBox.Location = new System.Drawing.Point(925, 521);
+            this.tPlayersListBox.Name = "tPlayersListBox";
+            this.tPlayersListBox.Size = new System.Drawing.Size(270, 411);
+            this.tPlayersListBox.TabIndex = 8;
             // 
             // MainUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(971, 521);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(1486, 944);
+            this.Controls.Add(this.tPlayersListBox);
+            this.Controls.Add(this.tTeamsListBox);
+            this.Controls.Add(this.btnCreateTorunament);
             this.Controls.Add(this.createTeamButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -134,6 +163,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button createTeamButton;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCreateTorunament;
+        private System.Windows.Forms.ListBox tPlayersListBox;
+        public System.Windows.Forms.ListBox tTeamsListBox;
     }
 }

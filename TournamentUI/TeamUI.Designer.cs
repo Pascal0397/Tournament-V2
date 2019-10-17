@@ -32,13 +32,13 @@
             this.createTeamLabel = new System.Windows.Forms.Label();
             this.teamNameLabel = new System.Windows.Forms.Label();
             this.playerLabel = new System.Windows.Forms.Label();
-            this.teamNameTextBox = new System.Windows.Forms.TextBox();
             this.playerAddedListBox = new System.Windows.Forms.ListBox();
             this.createNewPlayerLabel = new System.Windows.Forms.Label();
             this.createNewPlayerTextBox = new System.Windows.Forms.TextBox();
             this.addMemberButton = new System.Windows.Forms.Button();
             this.removeSelectedButton = new System.Windows.Forms.Button();
             this.createTeamButton = new System.Windows.Forms.Button();
+            this.createTeamTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // createTeamLabel
@@ -79,18 +79,6 @@
             this.playerLabel.TabIndex = 2;
             this.playerLabel.Text = "Players:";
             // 
-            // teamNameTextBox
-            // 
-            this.teamNameTextBox.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.teamNameTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teamNameTextBox.Location = new System.Drawing.Point(49, 156);
-            this.teamNameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.teamNameTextBox.Multiline = true;
-            this.teamNameTextBox.Name = "teamNameTextBox";
-            this.teamNameTextBox.Size = new System.Drawing.Size(347, 45);
-            this.teamNameTextBox.TabIndex = 3;
-            this.teamNameTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // playerAddedListBox
             // 
             this.playerAddedListBox.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -98,10 +86,11 @@
             this.playerAddedListBox.FormattingEnabled = true;
             this.playerAddedListBox.ItemHeight = 36;
             this.playerAddedListBox.Location = new System.Drawing.Point(472, 172);
-            this.playerAddedListBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.playerAddedListBox.Margin = new System.Windows.Forms.Padding(4);
             this.playerAddedListBox.Name = "playerAddedListBox";
             this.playerAddedListBox.Size = new System.Drawing.Size(347, 508);
             this.playerAddedListBox.TabIndex = 4;
+            this.playerAddedListBox.SelectedIndexChanged += new System.EventHandler(this.playerAddedListBox_SelectedIndexChanged);
             // 
             // createNewPlayerLabel
             // 
@@ -121,7 +110,7 @@
             this.createNewPlayerTextBox.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.createNewPlayerTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createNewPlayerTextBox.Location = new System.Drawing.Point(49, 286);
-            this.createNewPlayerTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.createNewPlayerTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.createNewPlayerTextBox.Multiline = true;
             this.createNewPlayerTextBox.Name = "createNewPlayerTextBox";
             this.createNewPlayerTextBox.Size = new System.Drawing.Size(347, 45);
@@ -133,7 +122,7 @@
             this.addMemberButton.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addMemberButton.ForeColor = System.Drawing.Color.DarkRed;
             this.addMemberButton.Location = new System.Drawing.Point(49, 338);
-            this.addMemberButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addMemberButton.Margin = new System.Windows.Forms.Padding(4);
             this.addMemberButton.Name = "addMemberButton";
             this.addMemberButton.Size = new System.Drawing.Size(256, 50);
             this.addMemberButton.TabIndex = 7;
@@ -147,7 +136,7 @@
             this.removeSelectedButton.ForeColor = System.Drawing.Color.DarkRed;
             this.removeSelectedButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.removeSelectedButton.Location = new System.Drawing.Point(828, 172);
-            this.removeSelectedButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.removeSelectedButton.Margin = new System.Windows.Forms.Padding(4);
             this.removeSelectedButton.Name = "removeSelectedButton";
             this.removeSelectedButton.Size = new System.Drawing.Size(223, 85);
             this.removeSelectedButton.TabIndex = 8;
@@ -159,13 +148,26 @@
             // 
             this.createTeamButton.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createTeamButton.ForeColor = System.Drawing.Color.DarkRed;
-            this.createTeamButton.Location = new System.Drawing.Point(49, 612);
-            this.createTeamButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.createTeamButton.Location = new System.Drawing.Point(48, 598);
+            this.createTeamButton.Margin = new System.Windows.Forms.Padding(4);
             this.createTeamButton.Name = "createTeamButton";
             this.createTeamButton.Size = new System.Drawing.Size(348, 82);
             this.createTeamButton.TabIndex = 9;
             this.createTeamButton.Text = "Create Team";
             this.createTeamButton.UseVisualStyleBackColor = true;
+            this.createTeamButton.Click += new System.EventHandler(this.createTeamButton_Click);
+            // 
+            // createTeamTextBox
+            // 
+            this.createTeamTextBox.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.createTeamTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createTeamTextBox.Location = new System.Drawing.Point(49, 157);
+            this.createTeamTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.createTeamTextBox.Multiline = true;
+            this.createTeamTextBox.Name = "createTeamTextBox";
+            this.createTeamTextBox.Size = new System.Drawing.Size(347, 45);
+            this.createTeamTextBox.TabIndex = 10;
+            this.createTeamTextBox.TextChanged += new System.EventHandler(this.createTeamTextBox_TextChanged);
             // 
             // TeamUI
             // 
@@ -173,13 +175,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1087, 736);
+            this.Controls.Add(this.createTeamTextBox);
             this.Controls.Add(this.createTeamButton);
             this.Controls.Add(this.removeSelectedButton);
             this.Controls.Add(this.addMemberButton);
             this.Controls.Add(this.createNewPlayerTextBox);
             this.Controls.Add(this.createNewPlayerLabel);
             this.Controls.Add(this.playerAddedListBox);
-            this.Controls.Add(this.teamNameTextBox);
             this.Controls.Add(this.playerLabel);
             this.Controls.Add(this.teamNameLabel);
             this.Controls.Add(this.createTeamLabel);
@@ -198,13 +200,13 @@
         private System.Windows.Forms.Label createTeamLabel;
         private System.Windows.Forms.Label teamNameLabel;
         private System.Windows.Forms.Label playerLabel;
-        private System.Windows.Forms.TextBox teamNameTextBox;
         private System.Windows.Forms.ListBox playerAddedListBox;
         private System.Windows.Forms.Label createNewPlayerLabel;
         private System.Windows.Forms.TextBox createNewPlayerTextBox;
         private System.Windows.Forms.Button addMemberButton;
         private System.Windows.Forms.Button removeSelectedButton;
         private System.Windows.Forms.Button createTeamButton;
+        private System.Windows.Forms.TextBox createTeamTextBox;
     }
 }
 

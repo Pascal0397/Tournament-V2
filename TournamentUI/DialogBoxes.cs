@@ -10,10 +10,7 @@ namespace TournamentUI
     {
         public void ShowDialogBox()
         {
-            TournamentUI tournamentUI = new TournamentUI();
-
-            tournamentUI.ShowDialog(this);
-            tournamentUI.Dispose();
+            
         }
     }
 }

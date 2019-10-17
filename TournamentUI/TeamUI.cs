@@ -13,9 +13,13 @@ namespace TournamentUI
 {
     public partial class TeamUI : Form
     {
-        public TeamUI()
+        public static string passingText = "";
+        DataTransfer transferDel;
+
+        public TeamUI(DataTransfer teamDel)
         {
             InitializeComponent();
+            transferDel = teamDel;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -28,7 +32,7 @@ namespace TournamentUI
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        public void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -53,6 +57,7 @@ namespace TournamentUI
             if (validateBox())
             {
                 playerAddedListBox.Items.Add(createNewPlayerTextBox.Text);
+                createNewPlayerTextBox.Clear();
             }
             else
             {
@@ -75,6 +80,22 @@ namespace TournamentUI
             {
                 playerAddedListBox.Items.RemoveAt(playerAddedListBox.SelectedIndex);
             }
+        }
+
+        private void createTeamButton_Click(object sender, EventArgs e)
+        {
+            string teamData = createTeamTextBox.Text;
+            transferDel.Invoke(teamData);
+        }
+
+        public void playerAddedListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+   
+        }
+
+        private void createTeamTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

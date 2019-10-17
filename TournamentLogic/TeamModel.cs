@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace TournamentLogic
 {
-    public class MemberModel
+    public class TeamLogic
     {
-        public string CreateMember { get; set; }
+        List<string> players = new List<string>();
+        string nameOfTeam;
     }
 }
