@@ -17,7 +17,7 @@ namespace TournamentUI
     public partial class MainUI : Form
     {
         private bool createTeamButtonWasClicked = false;
-
+        
         public string TournamentLabel 
         {
             get
@@ -47,10 +47,13 @@ namespace TournamentUI
         }
 
         private TeamUI teamUI;
+        private TournamentUI tournamentUI;
         private void createTeamButton_Click(object sender, EventArgs e)
         {
             this.teamUI = new TeamUI();
+            
             this.teamUI.CreateTeam.Click += CreateTeam_Click;
+            this.tournamentUI.CreateTournament.Click += btnCreateTorunament_Click;
             
             this.teamUI.ShowDialog();
         }
@@ -59,14 +62,14 @@ namespace TournamentUI
         {
             Console.WriteLine(this.teamUI.TeamModel.TeamName);
             Console.WriteLine(this.teamUI.TeamModel.Players);
+            
             tTeamsListBox.Items.Add(this.teamUI.TeamModel.TeamName);
+            
 
             foreach (var item in teamUI.TeamModel.Players)
             {
                 tPlayersListBox.Items.Add(item);
             }
-
-            //tPlayersListBox.Items.Add(this.teamUI.TeamModel.Players);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -81,7 +84,9 @@ namespace TournamentUI
 
         private void btnCreateTorunament_Click(object sender, EventArgs e)
         {
-            TournamentUI tournamentUI = new TournamentUI();
+            Console.WriteLine(this.tournamentUI.TournamentModel.NameOfTournament);
+            this.tournamentUI = new TournamentUI();
+            tournamentNameLabel.Name = this.tournamentUI.TournamentModel.NameOfTournament;
             tournamentUI.ShowDialog();
         }
 

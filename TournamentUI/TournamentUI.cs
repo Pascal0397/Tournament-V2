@@ -7,11 +7,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TournamentLogic;
 
 namespace TournamentUI
 {
     public partial class TournamentUI : Form
     {
+
+        public Button CreateTournament
+        {
+            get
+            {
+                return this.createTournamentButton;
+            }
+        }
+        private TournamentModel tournamentModel;
+        public TournamentModel TournamentModel
+        {
+            get
+            {
+                return this.tournamentModel;
+            }
+        }
 
         public TournamentUI()
         {
@@ -32,8 +49,8 @@ namespace TournamentUI
 
         private void createTournamentButton_Click(object sender, EventArgs e)
         {
-            MainUI main = new MainUI();
-            main.TournamentLabel = this.createTournamentButton.Text;
+            this.tournamentModel = new TournamentModel();
+            this.tournamentModel.NameOfTournament = tournamentNameTextBox.Text;
         }
     }
 }

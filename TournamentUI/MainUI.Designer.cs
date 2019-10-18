@@ -58,7 +58,7 @@
             this.tournamentNameLabel.Location = new System.Drawing.Point(29, 73);
             this.tournamentNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.tournamentNameLabel.Name = "tournamentNameLabel";
-            this.tournamentNameLabel.Size = new System.Drawing.Size(140, 46);
+            this.tournamentNameLabel.Size = new System.Drawing.Size(175, 58);
             this.tournamentNameLabel.TabIndex = 1;
             this.tournamentNameLabel.Text = "<none>";
             this.tournamentNameLabel.Click += new System.EventHandler(this.tournamentNameLabel_Click);
