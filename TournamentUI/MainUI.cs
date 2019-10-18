@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace TournamentUI
 {
     public delegate void DataTransfer(string teamData);
-    public delegate void PlayerTransfer(string playerData);
+    
     // TODO: Transfer Player Data
     public partial class MainUI : Form
     {
@@ -19,20 +19,18 @@ namespace TournamentUI
         
         private bool createTeamButtonWasClicked = false;
 
-        public MainUI()
+        public MainUI() 
         {
             InitializeComponent();
             transferDelegate += new DataTransfer(DataMethod);
+
+            
         }
+
 
         public void DataMethod(string teamData)
         {
             tTeamsListBox.Items.Add(teamData);
-        }
-
-        public void TransferPlayerData(string playerData)
-        {
-            tPlayersListBox.Items.Add(playerData);
         }
 
 

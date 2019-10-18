@@ -8,7 +8,7 @@ namespace TournamentLogic
 {
     public class GameModel
     {
-        public List<string> Teams { get; set; } jj 
+        public List<string> Teams { get; set; }
         public bool IsRunning { get; set; }
     }
 }

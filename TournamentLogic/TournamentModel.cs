@@ -10,6 +10,6 @@ namespace TournamentLogic
     {
         public List<GameModel> Games { get; set; }
         public List<TeamModel> Teams { get; set; }
-        public string NameOfTounament { get; set; }
+        public string NameOfTournament { get; set; }
     }
 }

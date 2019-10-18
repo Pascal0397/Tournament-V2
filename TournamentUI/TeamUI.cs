@@ -86,15 +86,13 @@ namespace TournamentUI
         {
             MainUI main = new MainUI();
             string teamData = createTeamTextBox.Text;
+            
+            
      
             transferDel.Invoke(teamData);
 
-            foreach (string s in playerAddedListBox.Items)
-            {
-                
-            }
-
             createTeamTextBox.Clear();
+            Close();
         }
 
         public void playerAddedListBox_SelectedIndexChanged(object sender, EventArgs e)
