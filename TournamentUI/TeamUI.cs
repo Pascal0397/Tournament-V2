@@ -14,12 +14,21 @@ namespace TournamentUI
     public partial class TeamUI : Form
     {
         public static string passingText = "";
-        DataTransfer transferDel;
+       // DataTransfer transferDel;
         
-        public TeamUI(DataTransfer teamDel)
+        public Button CreateTeam
+        {
+            get
+            {
+                return this.createTeamButton;
+            }
+        }
+
+        public TeamUI()
         {
             InitializeComponent();
-            transferDel = teamDel;
+            /* transferDel = teamDel;
+            DataTransfer teamDel */
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -82,15 +91,25 @@ namespace TournamentUI
             }
         }
 
-        public void createTeamButton_Click(object sender, EventArgs e)
-        {
-            MainUI main = new MainUI();
-            string teamData = createTeamTextBox.Text;
-            
-            
-     
-            transferDel.Invoke(teamData);
 
+        private TeamModel teamModel;
+        public TeamModel TeamModel
+        {
+            get
+            {
+                return this.teamModel;
+            }
+        }
+
+        private void createTeamButton_Click(object sender, EventArgs e)
+        {
+            this.teamModel = new TeamModel();
+            this.teamModel.TeamName = createTeamTextBox.Text;
+            
+
+            //transferDel.Invoke(teamData);
+            
+            
             createTeamTextBox.Clear();
             Close();
         }

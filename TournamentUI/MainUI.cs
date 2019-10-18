@@ -7,32 +7,38 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TournamentLogic;
 
 namespace TournamentUI
 {
-    public delegate void DataTransfer(string teamData);
+
+    // TODO: Remove delegate stuff
+    // TODO: Set TeamModelData in MainUI
+    
+    
+   // public delegate void DataTransfer(TeamModel teamData);
     
     // TODO: Transfer Player Data
     public partial class MainUI : Form
     {
-        public DataTransfer transferDelegate;
+       // public DataTransfer transferDelegate;
         
         private bool createTeamButtonWasClicked = false;
 
         public MainUI() 
         {
             InitializeComponent();
-            transferDelegate += new DataTransfer(DataMethod);
+            //transferDelegate += new DataTransfer(DataMethod);
 
             
         }
 
 
-        public void DataMethod(string teamData)
+         /* public void DataMethod(TeamModel teamData)
         {
-            tTeamsListBox.Items.Add(teamData);
-        }
-
+           tTeamsListBox.Items.Add(teamData);
+        } */
+        
 
         private void tournamentNameLabel_Click(object sender, EventArgs e)
         {
@@ -41,14 +47,23 @@ namespace TournamentUI
 
         private void MainUI_Load(object sender, EventArgs e) 
         {
-            //tTeamsListBox.Items.Add(TeamUI.passingText);
-            //TeamUI team = new TeamUI();
+            tTeamsListBox.Items.Add(TeamUI.passingText);
+            TeamUI team = new TeamUI();
         }
 
+        private TeamUI teamUI;
         private void createTeamButton_Click(object sender, EventArgs e)
         {
-            TeamUI teamUI = new TeamUI(transferDelegate);
-            teamUI.ShowDialog();
+            this.teamUI = new TeamUI();
+            this.teamUI.CreateTeam.Click += CreateTeam_Click;
+            
+            this.teamUI.ShowDialog();
+        }
+
+        private void CreateTeam_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine(this.teamUI.TeamModel.TeamName);
+            Console.WriteLine(this.teamUI.TeamModel.TeamName);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -58,7 +73,7 @@ namespace TournamentUI
 
         public void tTeamsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Update Playwer List with Team Members
+            tTeamsListBox.Items.Add(teamUI.Text);
         }
 
         private void btnCreateTorunament_Click(object sender, EventArgs e)
