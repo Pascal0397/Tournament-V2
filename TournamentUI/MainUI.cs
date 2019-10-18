@@ -63,8 +63,15 @@ namespace TournamentUI
         private void CreateTeam_Click(object sender, EventArgs e)
         {
             Console.WriteLine(this.teamUI.TeamModel.TeamName);
-            Console.WriteLine(this.teamUI.TeamModel.TeamName);
+            Console.WriteLine(this.teamUI.TeamModel.Players);
             tTeamsListBox.Items.Add(this.teamUI.TeamModel.TeamName);
+
+            foreach (var item in teamUI.TeamModel.Players)
+            {
+                tPlayersListBox.Items.Add(item);
+            }
+
+            //tPlayersListBox.Items.Add(this.teamUI.TeamModel.Players);
         }
 
         private void button2_Click(object sender, EventArgs e)
