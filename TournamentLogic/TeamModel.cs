@@ -8,10 +8,8 @@ namespace TournamentLogic
 {
     public class TeamModel
     {
-        public string _players { get; set; }
-        public string _teamName { get; set; }
+        public string TeamName { get; set; }
 
-        List<string> players = new List<string>();
-        string nameOfTeam;
+        List<string> Players { get; set; }
     }
 }

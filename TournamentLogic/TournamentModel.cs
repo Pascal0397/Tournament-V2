@@ -8,11 +8,8 @@ namespace TournamentLogic
 {
     public class TournamentModel
     {
-        public string _games { get; set; }
-        public string _teams { get; set; }
-        public string _tournamentName { get; set; }
-        public string _name { get; set; }
-
-        string nameOfTounament;
+        public List<GameModel> Games { get; set; }
+        public List<TeamModel> Teams { get; set; }
+        public string NameOfTounament { get; set; }
     }
 }
