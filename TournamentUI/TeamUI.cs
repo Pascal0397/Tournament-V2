@@ -27,8 +27,8 @@ namespace TournamentUI
         public TeamUI()
         {
             InitializeComponent();
-            /* transferDel = teamDel;
-            DataTransfer teamDel */
+           /* transferDel = teamDel;
+            DataTransfer teamDel*/
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -105,7 +105,7 @@ namespace TournamentUI
         {
             this.teamModel = new TeamModel();
             this.teamModel.TeamName = createTeamTextBox.Text;
-            
+           
 
             //transferDel.Invoke(teamData);
             

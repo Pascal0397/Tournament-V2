@@ -64,6 +64,7 @@ namespace TournamentUI
         {
             Console.WriteLine(this.teamUI.TeamModel.TeamName);
             Console.WriteLine(this.teamUI.TeamModel.TeamName);
+            tTeamsListBox.Items.Add(this.teamUI.TeamModel.TeamName);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -73,7 +74,7 @@ namespace TournamentUI
 
         public void tTeamsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            tTeamsListBox.Items.Add(teamUI.Text);
+            
         }
 
         private void btnCreateTorunament_Click(object sender, EventArgs e)

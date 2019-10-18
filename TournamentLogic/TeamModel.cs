@@ -10,6 +10,7 @@ namespace TournamentLogic
     {
         public string TeamName { get; set; }
 
-        List<string> Players { get; set; }
+        public List<string> Players { get; set; } = new List<string>();
+
     }
 }
