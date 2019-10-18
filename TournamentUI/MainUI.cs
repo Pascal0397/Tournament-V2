@@ -11,34 +11,29 @@ using TournamentLogic;
 
 namespace TournamentUI
 {
-
     // TODO: Remove delegate stuff
     // TODO: Set TeamModelData in MainUI
-    
-    
-   // public delegate void DataTransfer(TeamModel teamData);
-    
     // TODO: Transfer Player Data
     public partial class MainUI : Form
     {
-       // public DataTransfer transferDelegate;
-        
         private bool createTeamButtonWasClicked = false;
+
+        public string TournamentLabel 
+        {
+            get
+            {
+                return this.tournamentNameLabel.Text;
+            }
+            set
+            {
+                this.tournamentNameLabel.Text = value;
+            }
+        }
 
         public MainUI() 
         {
             InitializeComponent();
-            //transferDelegate += new DataTransfer(DataMethod);
-
-            
         }
-
-
-         /* public void DataMethod(TeamModel teamData)
-        {
-           tTeamsListBox.Items.Add(teamData);
-        } */
-        
 
         private void tournamentNameLabel_Click(object sender, EventArgs e)
         {

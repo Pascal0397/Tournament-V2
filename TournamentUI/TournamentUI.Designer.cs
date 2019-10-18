@@ -40,7 +40,7 @@
             this.createTournamentLabel.AutoSize = true;
             this.createTournamentLabel.Font = new System.Drawing.Font("Segoe UI Light", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createTournamentLabel.ForeColor = System.Drawing.Color.Red;
-            this.createTournamentLabel.Location = new System.Drawing.Point(189, 11);
+            this.createTournamentLabel.Location = new System.Drawing.Point(207, 18);
             this.createTournamentLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.createTournamentLabel.Name = "createTournamentLabel";
             this.createTournamentLabel.Size = new System.Drawing.Size(403, 62);
@@ -65,31 +65,32 @@
             // 
             this.tournamentNameTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tournamentNameTextBox.Location = new System.Drawing.Point(201, 146);
-            this.tournamentNameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tournamentNameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.tournamentNameTextBox.Multiline = true;
             this.tournamentNameTextBox.Name = "tournamentNameTextBox";
             this.tournamentNameTextBox.Size = new System.Drawing.Size(409, 47);
             this.tournamentNameTextBox.TabIndex = 2;
+            this.tournamentNameTextBox.TextChanged += new System.EventHandler(this.tournamentNameTextBox_TextChanged);
             // 
             // createTournamentButton
             // 
             this.createTournamentButton.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createTournamentButton.ForeColor = System.Drawing.Color.DarkRed;
-            this.createTournamentButton.Location = new System.Drawing.Point(283, 217);
-            this.createTournamentButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.createTournamentButton.Location = new System.Drawing.Point(284, 219);
+            this.createTournamentButton.Margin = new System.Windows.Forms.Padding(4);
             this.createTournamentButton.Name = "createTournamentButton";
             this.createTournamentButton.Size = new System.Drawing.Size(235, 105);
-            this.createTournamentButton.TabIndex = 3;
+            this.createTournamentButton.TabIndex = 4;
             this.createTournamentButton.Text = "Create Tournament";
             this.createTournamentButton.UseVisualStyleBackColor = true;
-            this.createTournamentButton.Click += new System.EventHandler(this.button1_Click);
+            this.createTournamentButton.Click += new System.EventHandler(this.createTournamentButton_Click);
             // 
             // TournamentUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(800, 348);
+            this.ClientSize = new System.Drawing.Size(640, 278);
             this.Controls.Add(this.createTournamentButton);
             this.Controls.Add(this.tournamentNameTextBox);
             this.Controls.Add(this.nameLabel);

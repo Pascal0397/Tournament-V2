@@ -12,6 +12,7 @@ namespace TournamentUI
 {
     public partial class TournamentUI : Form
     {
+
         public TournamentUI()
         {
             InitializeComponent();
@@ -23,9 +24,16 @@ namespace TournamentUI
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void tournamentNameTextBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void createTournamentButton_Click(object sender, EventArgs e)
+        {
+            MainUI main = new MainUI();
+            main.TournamentLabel = this.createTournamentButton.Text;
         }
     }
 }

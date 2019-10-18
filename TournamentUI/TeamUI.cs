@@ -107,9 +107,6 @@ namespace TournamentUI
             this.teamModel.TeamName = createTeamTextBox.Text;
             teamModel.Players = playerAddedListBox.Items.OfType<string>().ToList();
 
-            //transferDel.Invoke(teamData);
-
-
             createTeamTextBox.Clear();
             Close();
         }
