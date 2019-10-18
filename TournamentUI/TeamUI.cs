@@ -14,7 +14,6 @@ namespace TournamentUI
     public partial class TeamUI : Form
     {
         public static string passingText = "";
-       // DataTransfer transferDel;
         
         public Button CreateTeam
         {

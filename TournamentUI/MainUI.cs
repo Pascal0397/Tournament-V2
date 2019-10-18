@@ -53,7 +53,7 @@ namespace TournamentUI
             this.teamUI = new TeamUI();
             
             this.teamUI.CreateTeam.Click += CreateTeam_Click;
-            this.tournamentUI.CreateTournament.Click += btnCreateTorunament_Click;
+            this.tournamentUI.CreateTournament.Click += CreateTeam_Click;
             
             this.teamUI.ShowDialog();
         }
@@ -62,9 +62,10 @@ namespace TournamentUI
         {
             Console.WriteLine(this.teamUI.TeamModel.TeamName);
             Console.WriteLine(this.teamUI.TeamModel.Players);
-            
+            Console.WriteLine(this.tournamentUI.TournamentModel.NameOfTournament);
+
             tTeamsListBox.Items.Add(this.teamUI.TeamModel.TeamName);
-            
+            tournamentNameLabel.Text = this.tournamentUI.TournamentModel.NameOfTournament;
 
             foreach (var item in teamUI.TeamModel.Players)
             {
@@ -84,9 +85,9 @@ namespace TournamentUI
 
         private void btnCreateTorunament_Click(object sender, EventArgs e)
         {
-            Console.WriteLine(this.tournamentUI.TournamentModel.NameOfTournament);
+            
             this.tournamentUI = new TournamentUI();
-            tournamentNameLabel.Name = this.tournamentUI.TournamentModel.NameOfTournament;
+            
             tournamentUI.ShowDialog();
         }
 

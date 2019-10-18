@@ -38,7 +38,7 @@ namespace TournamentUI
 
         private void label1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
 
@@ -51,6 +51,8 @@ namespace TournamentUI
         {
             this.tournamentModel = new TournamentModel();
             this.tournamentModel.NameOfTournament = tournamentNameTextBox.Text;
+            
+            
         }
     }
 }
